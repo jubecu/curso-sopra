@@ -4,15 +4,31 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.sopra.java.model.business.GestorPeliculas;
+import com.sopra.java.model.dao.IPeliculasDAO;
+import com.sopra.java.model.dao.PeliculasDAOImpl;
 import com.sopra.java.model.entities.Categoria;
 import com.sopra.java.model.entities.Pelicula;
 
 public class Lanzador {
+	
+	private static ApplicationContext context;
+	static {
+		context=new ClassPathXmlApplicationContext("springConsoler.xml");
+	}
 
 	public static void main(String[] args) {
-		GestorPeliculas gestorPeliculas=new GestorPeliculas();
+		
+		
+		GestorPeliculas gestorPeliculas=context.getBean("gestorPeliculas",GestorPeliculas.class);
+		IPeliculasDAO<Pelicula> miDAOPelis=context.getBean("miDAOPelis",PeliculasDAOImpl.class);
+		gestorPeliculas.setMiDAOPelis(miDAOPelis);
+		
 		Pelicula peli1,peli2,peli3,peli4,peli5,peli6,peli7,peli8,peli9,peli10;
+		
 		List<Pelicula> peliculas=new ArrayList<Pelicula>();
 		
 		peli1=gestorPeliculas.crearPelicula(

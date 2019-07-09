@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.sopra.java.Factory;
 import com.sopra.java.model.dao.IPeliculasDAO;
 import com.sopra.java.model.entities.Categoria;
 import com.sopra.java.model.entities.Pelicula;
 
 public class GestorPeliculas {
 
-	private IPeliculasDAO<Pelicula> miDAOPelis=Factory.getDAOPelis();
+	private IPeliculasDAO<Pelicula> miDAOPelis;
 	
+	public void setMiDAOPelis(IPeliculasDAO<Pelicula> miDAOPelis) {
+		this.miDAOPelis = miDAOPelis;
+	}
+
 	public Pelicula crearPelicula(
 			Integer id, String titulo, String director, String sinopsis, List<Categoria> categorias) {
 		Pelicula pelicula=new Pelicula();

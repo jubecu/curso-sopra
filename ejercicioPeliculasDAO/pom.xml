@@ -2,12 +2,20 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sopra.streaming</groupId>
   <artifactId>ejercicioPeliculasDAO</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<spring.framework.version>5.1.8.RELEASE</spring.framework.version>
+	</properties>
+  
   <dependencies>
   	<dependency>
   		<groupId>com.sopra.streaming</groupId>
   		<artifactId>ejercicioPeliculasModelo</artifactId>
-  		<version>1.0.0</version>
+  		<version>1.1.0</version>
   	</dependency>
   </dependencies>
 </project>
