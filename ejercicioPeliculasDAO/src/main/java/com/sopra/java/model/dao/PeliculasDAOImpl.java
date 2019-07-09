@@ -3,10 +3,17 @@ package com.sopra.java.model.dao;
 import java.util.Collection;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
 import com.sopra.java.model.entities.Pelicula;
 
+@Repository
 public class PeliculasDAOImpl implements IPeliculasDAO<Pelicula>{
 	
+	@Autowired
+	@Qualifier("peliculas")
 	Map<Integer, Pelicula> peliculas;
 
 	public PeliculasDAOImpl(Map<Integer, Pelicula> peliculas) {

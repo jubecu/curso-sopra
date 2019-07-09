@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.sopra.java.model.dao.IPeliculasDAO;
 import com.sopra.java.model.entities.Categoria;
 import com.sopra.java.model.entities.Pelicula;
 
+@Service
 public class GestorPeliculas {
 
+	@Autowired
 	private IPeliculasDAO<Pelicula> miDAOPelis;
 	
 	public void setMiDAOPelis(IPeliculasDAO<Pelicula> miDAOPelis) {

@@ -2,6 +2,11 @@ package com.sopra.java.model.entities;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value="prototype")
 public class Pelicula {
 
 	private Integer identificador;

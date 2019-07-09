@@ -17,14 +17,14 @@ public class Lanzador {
 	
 	private static ApplicationContext context;
 	static {
-		context=new ClassPathXmlApplicationContext("springConsoler.xml");
+		context=new ClassPathXmlApplicationContext("beans.xml");
 	}
 
 	public static void main(String[] args) {
 		
 		
-		GestorPeliculas gestorPeliculas=context.getBean("gestorPeliculas",GestorPeliculas.class);
-		IPeliculasDAO<Pelicula> miDAOPelis=context.getBean("miDAOPelis",PeliculasDAOImpl.class);
+		GestorPeliculas gestorPeliculas=context.getBean(GestorPeliculas.class);
+		IPeliculasDAO<Pelicula> miDAOPelis=context.getBean(PeliculasDAOImpl.class);
 		gestorPeliculas.setMiDAOPelis(miDAOPelis);
 		
 		Pelicula peli1,peli2,peli3,peli4,peli5,peli6,peli7,peli8,peli9,peli10;
