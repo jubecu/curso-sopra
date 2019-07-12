@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sopra.streaming</groupId>
 	<artifactId>ejercicioPeliculasNegocio</artifactId>
-	<version>1.2.0</version>
+	<version>1.3.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>com.sopra.streaming</groupId>
 			<artifactId>ejercicioPeliculasDAO</artifactId>
-			<version>1.2.0</version>
+			<version>1.3.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

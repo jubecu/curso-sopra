@@ -1,6 +1,7 @@
 package com.sopra.java.model.entities;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -8,6 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(value="prototype")
 public class Pelicula {
+	
+	private static AtomicInteger secuencia;
+
+	static {
+		secuencia=new AtomicInteger();
+	}
 
 	private Integer identificador;
 	
@@ -42,6 +49,14 @@ public class Pelicula {
 		} else if (!identificador.equals(other.identificador))
 			return false;
 		return true;
+	}
+	
+	public static AtomicInteger getSecuencia() {
+		return secuencia;
+	}
+
+	public static void setSecuencia(AtomicInteger secuencia) {
+		Pelicula.secuencia = secuencia;
 	}
 
 	public Integer getIdentificador() {

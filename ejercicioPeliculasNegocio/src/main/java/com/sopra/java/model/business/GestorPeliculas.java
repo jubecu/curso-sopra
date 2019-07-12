@@ -16,15 +16,29 @@ public class GestorPeliculas {
 
 	@Autowired
 	private IPeliculasDAO<Pelicula> miDAOPelis;
+	//private static GestorPeliculas instance;
 	
-	public void setMiDAOPelis(IPeliculasDAO<Pelicula> miDAOPelis) {
+	public GestorPeliculas(IPeliculasDAO<Pelicula> miDAOPelis) {
+		super();
 		this.miDAOPelis = miDAOPelis;
 	}
+	
+	/*public static GestorPeliculas getInstance(IPeliculasDAO<Pelicula> miDAOPelis) {
+		if(instance==null)
+			instance=new GestorPeliculas(miDAOPelis);
+		return instance;
+	}*/
+
+	/*
+	 * public void setMiDAOPelis(IPeliculasDAO<Pelicula> miDAOPelis) {
+	 * this.miDAOPelis = miDAOPelis; }
+	 */
 
 	public Pelicula crearPelicula(
-			Integer id, String titulo, String director, String sinopsis, List<Categoria> categorias) {
+			String titulo, String director, String sinopsis, List<Categoria> categorias) {
 		Pelicula pelicula=new Pelicula();
-		pelicula.setIdentificador(id);
+		pelicula.setIdentificador(Pelicula.getSecuencia().incrementAndGet());
+		pelicula.setTitulo(titulo);
 		pelicula.setDirector(director);
 		pelicula.setSinopsis(sinopsis);
 		pelicula.setCategorias(categorias);

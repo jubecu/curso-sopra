@@ -25,42 +25,42 @@ public class Lanzador {
 		
 		GestorPeliculas gestorPeliculas=context.getBean(GestorPeliculas.class);
 		IPeliculasDAO<Pelicula> miDAOPelis=context.getBean(PeliculasDAOImpl.class);
-		gestorPeliculas.setMiDAOPelis(miDAOPelis);
+		//gestorPeliculas.setMiDAOPelis(miDAOPelis);
 		
 		Pelicula peli1,peli2,peli3,peli4,peli5,peli6,peli7,peli8,peli9,peli10;
 		
 		List<Pelicula> peliculas=new ArrayList<Pelicula>();
 		
 		peli1=gestorPeliculas.crearPelicula(
-				1, "Star wars", "George Lucas", "", Arrays.asList(Categoria.CIENCIA_FICCION));
+				"Star wars", "George Lucas", "", Arrays.asList(Categoria.CIENCIA_FICCION));
 		peliculas.add(peli1);
 		peli2=gestorPeliculas.crearPelicula(
-				2, "Peli 2", "Pepito", "", Arrays.asList(Categoria.ACCION));
+				"Peli 2", "Pepito", "", Arrays.asList(Categoria.ACCION));
 		peliculas.add(peli2);
 		peli3=gestorPeliculas.crearPelicula(
-				3, "Peli 3", "Jorgito", "", Arrays.asList(Categoria.COMEDIA));
+				"Peli 3", "Jorgito", "", Arrays.asList(Categoria.COMEDIA));
 		peliculas.add(peli3);
 		peli4=gestorPeliculas.crearPelicula(
-				4, "Peli 4", "Juan", "", Arrays.asList(Categoria.DRAMA,Categoria.COMEDIA));
+				"Peli 4", "Juan", "", Arrays.asList(Categoria.DRAMA,Categoria.COMEDIA));
 		peliculas.add(peli4);
 		peli5=gestorPeliculas.crearPelicula(
-				5, "Peli 5", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
+				"Peli 5", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
 		peliculas.add(peli5);
 		
 		peli6=gestorPeliculas.crearPelicula(
-				6, "Peli 6", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
+				"Peli 6", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
 		peliculas.add(peli6);
 		peli7=gestorPeliculas.crearPelicula(
-				7, "Peli 7", "Pedro", "", Arrays.asList(Categoria.TERROR));
+				"Peli 7", "Pedro", "", Arrays.asList(Categoria.TERROR));
 		peliculas.add(peli7);
 		peli8=gestorPeliculas.crearPelicula(
-				8, "Peli 8", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
+				"Peli 8", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
 		peliculas.add(peli8);
 		peli9=gestorPeliculas.crearPelicula(
-				9, "Peli 9", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
+				"Peli 9", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
 		peliculas.add(peli9);
 		peli10=gestorPeliculas.crearPelicula(
-				10, "Peli 10", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
+				"Peli 10", "Pedro", "", Arrays.asList(Categoria.SUSPENSE));
 		peliculas.add(peli10);
 		
 		
@@ -70,9 +70,9 @@ public class Lanzador {
 		
 		
 		peli3=gestorPeliculas.crearPelicula(
-				3, "Peli 3", "David", "", Arrays.asList(Categoria.COMEDIA));
+				"Peli 3", "David", "", Arrays.asList(Categoria.COMEDIA));
 		peli8=gestorPeliculas.crearPelicula(
-				8, "Peli 8", "Pedro", "", Arrays.asList(Categoria.TERROR));
+				"Peli 8", "Pedro", "", Arrays.asList(Categoria.TERROR));
 		
 		List<Pelicula> pelisAct=new ArrayList<Pelicula>();
 		pelisAct.add(peli3);
