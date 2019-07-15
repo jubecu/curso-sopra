@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ejercicioPeliculasRestJPA
+server:
+  port: 8890
