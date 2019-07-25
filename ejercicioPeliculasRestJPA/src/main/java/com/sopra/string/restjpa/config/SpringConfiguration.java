@@ -10,12 +10,11 @@ import com.sopra.string.restjpa.model.entities.Pelicula;
 @Configuration
 public class SpringConfiguration {
 
-	@Bean
-	public CommandLineRunner iniciarBaseDeDatos(AlmacenDePeliculas almacen) {
-		return args -> {
-			almacen.save(new Pelicula("Tiburon","Spielberg","Dinamica","Acción"));
-			almacen.save(new Pelicula("Titanic","James Cameron","Larga","Drama"));
-			almacen.save(new Pelicula("Pulp Fiction","Tarantino","Muy buena","Acción"));
-		};
-	}
+	/*
+	 * @Bean public CommandLineRunner iniciarBaseDeDatos(AlmacenDePeliculas almacen)
+	 * { return args -> { almacen.save(new
+	 * Pelicula("Tiburon","Spielberg","Dinamica","Acción")); almacen.save(new
+	 * Pelicula("Titanic","James Cameron","Larga","Drama")); almacen.save(new
+	 * Pelicula("Pulp Fiction","Tarantino","Muy buena","Acción")); }; }
+	 */
 }

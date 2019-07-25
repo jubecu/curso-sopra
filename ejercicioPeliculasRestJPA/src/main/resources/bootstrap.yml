@@ -1,5 +1,14 @@
 spring:
   application:
     name: ejercicioPeliculasRestJPA
-server:
-  port: 8890
+  datasource:
+    url: jdbc:mysql://mysql-server:3306/mysql
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+eureka:
+  client:
+    service-url:
+     defaultZone: http://eureka-server:8761/eureka/  

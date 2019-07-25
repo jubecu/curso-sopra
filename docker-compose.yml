@@ -1,0 +1,34 @@
+version: '3.3'
+services:
+  front-server:
+    build: ./ejemplo15mvcRestTemplateLoadBalancer
+    ports:
+      - 8080:8080
+    depends_on:
+      - eureka-server
+      - back-server
+  eureka-server:
+    build: ./ejercicioPeliculasCloudEureka
+    ports:
+      - 8761:8761
+  back-server:
+    build: ./ejercicioPeliculasRestJPA
+    depends_on:
+      - mysql-server
+      - eureka-server
+    ports:
+      - 8082:8080
+  back-server-2:
+    build: ./ejercicioPeliculasRestJPA
+    depends_on:
+      - mysql-server
+      - eureka-server
+  back-server-3:
+    build: ./ejercicioPeliculasRestJPA
+    depends_on:
+      - mysql-server
+      - eureka-server
+  mysql-server:
+    image: mysql:8.0.16
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
