@@ -1,0 +1,12 @@
+Nombre:<input type="text" class="cajita" (input)="cambiarNombre($event)" [value]="nombre"><br>
+
+Apellidos:<input type="text" class="cajita" (input)="cambiarApellidos($event)" [value]="apellidos"><br>
+
+Email:<input type="email" class="cajita" (input)="cambiarEmail($event)" [value]="email"><br>
+
+Foto:<input type="text" class="cajita" (input)="cambiarFoto($event)" [value]="foto"><br>
+
+Skill:<input type="text" class="cajita" #inputRef>
+<button type="button" (click)="annadirSkill(inputRef)">Añadir skill</button><br>
+
+<app-preview-cv [nombre]="nombre" [apellidos]="apellidos" [email]="email" [foto]="foto" [skills]="skills"></app-preview-cv>
