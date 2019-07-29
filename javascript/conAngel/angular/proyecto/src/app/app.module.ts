@@ -14,6 +14,22 @@ import { CmpLukeComponent } from './cmp-comunicacion-entre-cmps/cmp-luke/cmp-luk
 import { MiCvComponent } from './mi-cv/mi-cv.component';
 import { PreviewCvComponent } from './mi-cv/preview-cv/preview-cv.component';
 import { FormCvComponent } from './mi-cv/form-cv/form-cv.component';
+import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
+import { DoblePipe } from './cmp-pipes/doble.pipe';
+import { ReversePipe } from './cmp-pipes/reverse.pipe';
+import { CurrencyRightPipe } from './cmp-pipes/currency-right.pipe';
+import { HideWordsPipe } from './cmp-pipes/hide-words.pipe';
+import { FiltroPipe } from './cmp-pipes/filtro.pipe';
+import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
+import { MarcarDirective } from './cmp-directivas/marcar.directive';
+import { BlinkDirective } from './cmp-directivas/blink.directive';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
+import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
+import { ListaMemesComponent } from './ej-memes/lista-memes/lista-memes.component';
+import { FormComponent } from './ej-memes/form/form.component';
+import { GeneradorComponent } from './ej-memes/generador/generador.component';
+import { MemeComponent } from './ej-memes/meme/meme.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +44,23 @@ import { FormCvComponent } from './mi-cv/form-cv/form-cv.component';
     CmpLukeComponent,
     MiCvComponent,
     PreviewCvComponent,
-    FormCvComponent
+    FormCvComponent,
+    CmpPipesComponent,
+    DoblePipe,
+    ReversePipe,
+    CurrencyRightPipe,
+    HideWordsPipe,
+    FiltroPipe,
+    CmpDirectivasComponent,
+    MarcarDirective,
+    BlinkDirective,
+    CmpServiciosComponent,
+    CmpAComponent,
+    CmpBComponent,
+    ListaMemesComponent,
+    FormComponent,
+    GeneradorComponent,
+    MemeComponent
   ],
   imports: [
     BrowserModule,

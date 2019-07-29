@@ -1,0 +1,36 @@
+<h2>Directivas</h2>
+
+<h3>De atributo</h3>
+<p>Color: {{color}}</p>
+<input type="text" [(ngModel)]="color">
+<p [ngStyle]="{color: color, textDecoration:'line-through'}">Texto azul y tachado</p>
+
+<label>
+    Letra negrita?
+    <input type="checkbox" (change)="negrita=!negrita">
+</label>
+<p [ngClass]="{negrita: negrita, letraAmarilla:true}">Texto en negrita y amarillo</p>
+
+<p appMarcar ="red" appBlink="blue">Párrafo marcado</p>
+<p appMarcar="blue">Párrafo marcado</p>
+<p appMarcar>Párrafo marcado</p>
+
+<!-- Los estructurales se diferencian por el asterisco. -->
+<h3>Estructurales</h3>
+<button type="button" (click)="toggleMostrarItem()">Cambiar mostrarItem</button>
+<p *ngIf="mostrarItem; else else2" appMarcar="red" appBlink="blue">Párrafo marcado</p>
+
+<ng-template #else2>
+    <p appMarcar>Párrafo marcado (ELSE)</p>
+</ng-template>
+
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'black'">Es de color black</p>
+    <p *ngSwitchCase="'white'">Es de color white</p>
+    <p *ngSwitchDefault>Es de otro color</p>
+</div>
